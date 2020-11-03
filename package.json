@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Web client for the Low-Cal Calzone Zone (demo project)",
+  "main": "index.js",
+  "author": "<chiniczrebeca@gmail.com>",
+  "license": "MIT"
 }
