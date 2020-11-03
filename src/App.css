@@ -1,6 +1,9 @@
+* {
+  background-color: rgb(233, 185, 130);
+}
+
 .App {
   text-align: center;
-  background-color: #fad7af;
 }
 
 .App-logo {
@@ -22,7 +25,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #FFFFFF;
-  background: #fad7af;
   text-shadow: -5px 5px 0px #EFB566, -10px 10px 0px #DC8A31, -15px 15px 0px #000000;
 }
 

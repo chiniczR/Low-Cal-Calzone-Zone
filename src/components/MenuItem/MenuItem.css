@@ -1,0 +1,4 @@
+.MenuItem {
+    height: 5em;
+    pointer-events: none;
+}

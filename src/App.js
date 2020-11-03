@@ -13,10 +13,10 @@ function App() {
       </header>
       <Container fluid>
           <Row>
-            <Col>
+            <Col className="border-right">
               <Menu />
             </Col>
-            <Col>
+            <Col className="border-right">
             </Col>
             <Col>
             </Col>
