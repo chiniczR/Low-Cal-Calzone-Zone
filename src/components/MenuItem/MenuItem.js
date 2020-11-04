@@ -1,9 +1,14 @@
-import calzone from '../../assets/images/calzone.png';
-import './MenuItem.css';
+import Calzone from '../../assets/images/calzone.png';
+import './MenuItem.scss';
+import ItemImages from './ItemImages';
 
-function MenuItem () {
+function MenuItem (props) {
+    var Image = Calzone
+    if (props.name) {
+        Image = ItemImages[[props.name]]
+    }
     return (
-        <img className="MenuItem" src={calzone}></img>
+        <img className={`MenuItem ${props.size}`} src={Image} alt={props.name ? props.name : props.size} title={props.name ? props.name : props.size} />
     );
 }
 
