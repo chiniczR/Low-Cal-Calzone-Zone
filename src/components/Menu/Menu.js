@@ -1,84 +1,87 @@
-import React from 'react';
-import './Menu.scss';
-import { Button, Container, Row } from 'react-bootstrap';
+import React, { useState } from 'react';
+import './Menu.css';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import MenuItem from '../MenuItem/MenuItem';
 
-class Menu extends React.Component {
-    constructor () {
-        super()
-        this.state = {
-            size: '',
-            filling: '',
-            drink: ''
+function Menu ({ orderFood }) {
+    const [size, setSize] = useState('medium')
+    const sizes = [
+        { name: 'Small', value: 'small' },
+        { name: 'Medium', value: 'medium' },
+        { name: 'Large', value: 'large' },
+    ];
+
+    const [fillings, setFillings] = useState([])
+    const fills = [
+        { name: 'Tomato', value: 'tomato' },
+        { name: 'Onion', value: 'onion' },
+        { name: 'Pepper', value: 'pepper' },
+        { name: 'Cheese', value: 'cheese' },
+        { name: 'Broccoli', value: 'broccoli' }
+    ];
+    const changeFilling = (e, prev) => {
+        let val = e.target.value;
+        if (fillings.includes(val)) {
+            return fillings.filter(fil => fil !== val);
+        }
+        else {
+            return [...prev, val];
         }
     }
 
-    render () {
-        return (
-            <Container className="Menu border rounded">
-                <h2><u>MENU</u></h2>
-                <label htmlFor="sizeRow">Size:</label>
-                <span id="sizeRow" className="ml-4">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="small"  />
-                        <label class="form-check-label" for="inlineRadio1">
-                            <MenuItem size="small"/>
+    return (
+        <Container className="Menu border rounded">
+            <h2><u>MENU</u></h2>
+            <label htmlFor="sizeRow">Size:</label>
+            <span id="sizeRow" className="ml-4">
+                {sizes.map((sz, i) => (
+                    <div className="form-check form-check-inline" key={sz.name + i}>
+                        <input
+                            className="form-check-input" 
+                            type="radio" 
+                            name="size" 
+                            id={"inlineRadio" + i} 
+                            value={sz.value} 
+                            checked={size === sz.value}
+                            onChange={(e) => setSize(e.currentTarget.value)}
+                        />
+                        <label className="form-check-label" htmlFor={"inlineRadio" + i}>
+                            <MenuItem size={sz.value} />
                         </label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Medium" checked />
-                        <label class="form-check-label" for="inlineRadio2">
-                            <MenuItem size="medium"/>
+                ))}
+            </span>
+            <hr />
+            <label htmlFor="fillingRow">Filling:</label>
+            <span id="fillingRow" className="ml-4">
+                {fills.map((f, i) => (
+                    <div className="form-check form-check-inline" key={f.name + i}>
+                        <input
+                            className="form-check-input" 
+                            type="checkbox" 
+                            name="size" 
+                            id={"inlineRadio" + i} 
+                            value={f.value} 
+                            checked={fillings.includes(f.value)}
+                            onChange={(e) => setFillings((prev) => changeFilling(e, prev) )}
+                        />
+                        <label className="form-check-label" htmlFor={"inlineRadio" + i}>
+                            <MenuItem size={f.value === "cheese" ? "large" : "small"} name={f.value} />
                         </label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="large" />
-                        <label class="form-check-label" for="inlineRadio3">
-                            <MenuItem size="large"/>
-                        </label>
-                    </div>
-                </span>
-                <hr />
-                <label htmlFor="fillingRow">Filling:</label>
-                <span id="fillingRow" className="ml-4">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="tomato" />
-                        <label class="form-check-label" for="inlineRadio4">
-                            <MenuItem size="small" name="tomato"/>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="onion" />
-                        <label class="form-check-label" for="inlineRadio5">
-                            <MenuItem size="small" name="onion"/>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio6" value="pepper" />
-                        <label class="form-check-label" for="inlineRadio6">
-                            <MenuItem size="small" name="pepper"/>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio7" value="cheese" />
-                        <label class="form-check-label" for="inlineRadio7">
-                            <MenuItem size="large" name="cheese"/>
-                        </label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio8" value="broccoli" />
-                        <label class="form-check-label" for="inlineRadio8">
-                            <MenuItem size="small" name="broccoli"/>
-                        </label>
-                    </div>
-                </span>
-                <hr className="my-1" />
-                <Row className="justify-content-end mr-1">
-                    <Button variant="outline-dark" className="rounded-circle"><b>+</b></Button>
-                </Row>
-            </Container>
-        )
-    }
+                ))}
+            </span>
+            <hr className="my-1" />
+            <Row>
+                <Col sm="10" className="text-left">
+                    {size.charAt(0).toUpperCase() + size.slice(1)} calzone with {fillings.join(", ")}
+                    </Col>
+                <Col sm="2" className="text-right">
+                    <Button variant="outline-dark" title="Add to order" className="rounded-circle py-0 px-2 m-1" onClick={() => orderFood({ size: size, fillings: fillings })}><b>+</b></Button>
+                </Col>
+            </Row>
+        </Container>
+    )
 }
 
 export default Menu;

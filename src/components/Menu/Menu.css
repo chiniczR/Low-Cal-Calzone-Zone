@@ -1,7 +1,8 @@
 .container.Menu {
     box-shadow: 5px 5px black;
     background: rgb(255, 234, 195);
-    & * {
-      background-color: transparent;
-    }
+}
+
+.container.Menu * {
+  background-color: transparent;
 }

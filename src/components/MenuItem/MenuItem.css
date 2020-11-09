@@ -1,0 +1,13 @@
+.MenuItem {
+    pointer-events: none;
+}
+
+.small {
+    height: 4em;
+}
+.medium { 
+    height: 5em;
+}
+.large {
+    height: 6em;
+}

@@ -1,5 +1,5 @@
 import Calzone from '../../assets/images/calzone.png';
-import './MenuItem.scss';
+import './MenuItem.css';
 import ItemImages from './ItemImages';
 
 function MenuItem (props) {
