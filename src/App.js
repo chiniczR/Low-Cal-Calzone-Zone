@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Menu from './components/Menu/Menu';
+import OrderPad from './components/OrderPad/OrderPad';
 
 function App() {
   const [food, setFood] = useState([])
@@ -16,6 +17,21 @@ function App() {
     }
     setFood(f);
   }
+  const dropFood = (order) => {
+
+  }
+  const [drinks, setDrinks] = useState([])
+  const pushDrink = (order) => {
+    let d = [...drinks];
+    let existInd = d.findIndex(o => o.drink === order);
+    if (existInd > -1) {
+      d[existInd].quantity += 1;
+    }
+    else {
+      d.push({ drink: order, quantity: 1 });
+    }
+    setDrinks(d);
+  }
 
   return (
     <div className="App">
@@ -27,8 +43,8 @@ function App() {
       <Container fluid>
           <Row>
             <Col className="border-right">
-              <Menu orderFood={order => pushFood(order)} />
-              <p className="mt-3">{JSON.stringify(food)}</p>
+              <Menu orderFood={order => pushFood(order)} orderDrink={order => pushDrink(order)} />
+              <OrderPad className="mt-3" food={food} drinks={drinks} />
             </Col>
             <Col className="border-right">
             </Col>
