@@ -35,6 +35,12 @@ function Menu ({ orderFood, orderDrink }) {
         { name: 'Iced Tea', value: 'iced-tea' }
     ]
 
+    const orderFoodClick = () => {
+        orderFood({ size: size, fillings: fillings });
+        setSize('medium');
+        setFillings([]);
+    }
+
     return (
         <Container className="Menu border rounded">
             <h2 className="mb-0"><u>MENU</u></h2>
@@ -83,7 +89,7 @@ function Menu ({ orderFood, orderDrink }) {
                     <p className="ml-1 mt-1 mb-0">{size.charAt(0).toUpperCase() + size.slice(1)} calzone { fillings.length > 0 ? 'with ' : '' } {fillings.join(", ")}</p>
                 </Col>
                 <Col sm="2" className="text-right">
-                    <Button variant="outline-dark" title="Add to order" className="rounded-circle py-0 px-2 m-1" onClick={() => orderFood({ size: size, fillings: fillings })}><b>+</b></Button>
+                    <Button variant="outline-dark" title="Add to order" className="rounded-circle py-0 px-2 m-1" onClick={() => orderFoodClick()}><b>+</b></Button>
                 </Col>
             </Row>
             <hr className="mt-0 mb-2" />
