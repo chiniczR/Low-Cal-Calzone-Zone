@@ -1,4 +1,4 @@
-* {
+html, .App {
   background-color: rgb(233, 185, 130);
 }
 
@@ -10,12 +10,6 @@
   height: 5em;
   pointer-events: none;
 }
-/* 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
 .App-header {
   width: 100%;
@@ -31,12 +25,28 @@
 .App-link {
   color: #61dafb;
 }
-/* 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+
+.btn {
+  transition: box-shadow font-weight .3s;
+}
+.btn:hover:enabled {
+  box-shadow: 5px 5px 9px 0 rgba(0, 0, 0, 0.25),
+  -1px -1px 5px 0 rgba(247, 189, 114, 0.3);
+}
+.btn:hover:disabled {
+  cursor: not-allowed !important;
+}
+
+.bg-off-white {
+  background: rgba(184, 164, 138, 0.774) !important;
+  color: white !important;
+}
+.bg-off-white:hover:enabled {
+  background: rgba(255, 188, 101, 0.774) !important;
+  font-weight: bolder !important;
+}
+
+.bg-transparent {
+  backdrop-filter: unset;
+  background: transparent !important;
+}
