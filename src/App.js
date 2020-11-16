@@ -5,6 +5,9 @@ import Menu from "./components/Menu/Menu";
 import OrderPad from "./components/OrderPad/OrderPad";
 import Kitchen from "./components/Kitchen/Kitchen";
 import OrderStack from "./components/OrderStack/OrderStack";
+import ReadyDeliveryGuy from "./assets/images/Messenger-pana.png";
+import OnRouteDeliveryGuy from "./assets/images/Delivery-amico.png";
+import DeliveryStack from "./components/DeliveryStack/DeliveryStack";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -81,6 +84,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [addr, setAddr] = useState('');
   const [stage, setStage] = useState('empty');
+  const [delivering, setDelivering] = useState(false);
 
   const handleSubmitOrder = (event) => {
     event.preventDefault()
@@ -102,7 +106,8 @@ function App() {
     setFood([]);
     setDrinks([]);
 
-    setStage('baking'); // <-- Should only happen when we get a notification from the topic
+    setStage('baking'); // <-- Should only happen when we get notfied from kitchen topic
+    setDelivering(true); // <-- Should only happen when notified from delivery topic
   }
 
   return (
@@ -116,7 +121,7 @@ function App() {
       </header>
       <Container fluid>
         <Row className="justify-content-center align-items-center">
-          <Col className="border-right">
+          <Col>
             <Menu
               orderFood={(order) => pushFood(order)}
               orderDrink={(order) => pushDrink(order)}
@@ -142,11 +147,15 @@ function App() {
               Place Order
             </Button>
           </Col>
-          <Col className="border-right">
+          <Col className="bg-cool rounded p-0 m-1">
             <OrderStack orders={orders} />
             <Kitchen stage={stage} />
           </Col>
-          <Col></Col>
+          <Col className="bg-cool rounded p-0 m-1 mr-2">
+            <DeliveryStack deliveries={orders} />
+            <img src={delivering ? OnRouteDeliveryGuy : ReadyDeliveryGuy} alt="Ready delivery guy" height="400" />
+            <h5>{delivering ? 'Delivery on route' : 'Ready to deliver'}</h5>
+          </Col>
         </Row>
       </Container>
       <Modal show={show} onHide={handleClose} backdrop={true}>

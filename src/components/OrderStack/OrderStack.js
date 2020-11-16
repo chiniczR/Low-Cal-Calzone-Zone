@@ -35,7 +35,7 @@ function OrderStack ({orders}) {
         return (
             <span key={i} className="m-1">
                 <OverlayTrigger trigger="click" placement="right" overlay={popover(order, i)}>
-                    <img src={OrderCheck} alt="Order check" className={`btn-img border border-${color(i)} rounded`} height="100" />
+                    <img src={OrderCheck} alt="Order check" className={`btn-img border border-${color(i)} rounded`} height="90" />
                 </OverlayTrigger>
             </span>
         );
@@ -43,7 +43,7 @@ function OrderStack ({orders}) {
 
     return (
         <Container fluid className="my-2 mx-1">
-            <Row className="justify-content-center">
+            <Row className="justify-content-left">
                 {ordersToStack}
             </Row>
         </Container>

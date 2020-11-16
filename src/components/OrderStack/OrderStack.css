@@ -1,7 +1,9 @@
 .btn-img {
     transition: box-shadow .3s;
+    border-radius: 15%;
 }
 .btn-img:hover {
     cursor: pointer;
+    background: rgba(168, 167, 167, 0.25);
     box-shadow: 5px 5px 9px 0 rgba(0, 0, 0, 0.25), -1px -1px 5px 0 rgba(247, 189, 114, 0.3);
 }
