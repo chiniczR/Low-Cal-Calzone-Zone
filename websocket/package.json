@@ -1,0 +1,12 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "Simple websocket (Socket.IO) server",
+  "main": "index.js",
+  "author": "Rebeca Chinicz",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4"
+  }
+}

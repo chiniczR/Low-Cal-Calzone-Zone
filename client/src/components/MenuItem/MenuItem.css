@@ -1,0 +1,26 @@
+.MenuItem {
+    pointer-events: none;
+}
+
+.small {
+    height: 3em !important;
+}
+.medium { 
+    height: 4em !important;
+}
+.large {
+    height: 5em !important;
+}
+
+.unavailable {
+    filter: grayscale(100%);
+}
+
+.food {
+    border-radius: 15px;
+    border: 2px solid black
+}
+
+.pull-up {
+    margin-bottom: -1rem;
+}

@@ -1,0 +1,56 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lccz-be
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - host: api.low-cal-calzone.zone
+      http:
+        paths:
+          - path: /calzones(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: calzones
+                port:
+                  number: 8080
+          - path: /beverages(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: beverages
+                port:
+                  number: 8080
+          - path: /checkout(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: checkout
+                port:
+                  number: 8080
+          - path: /websocket(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: websocket
+                port:
+                  number: 5000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lccz-fe
+spec:
+  rules:
+    - host: low-cal-calzone.zone
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: client
+                port:
+                  number: 80

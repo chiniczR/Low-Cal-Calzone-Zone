@@ -1,0 +1,10 @@
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password="test"
+configMapGenerator:
+- name:  mysql-initdb-config
+  files:
+  - init.sql
+resources:
+  - mysql.yaml

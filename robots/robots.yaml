@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: robots
+spec:
+  selector:
+    matchLabels:
+      app: robots
+  template:
+    metadata:
+      labels:
+        app: robots
+    spec:
+      containers:
+      - name: robots
+        image: robots
+        imagePullPolicy: Never
+#         ports:
+#         - containerPort: 80
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: robots
+# spec:
+#   selector:
+#     app: robots
+#   ports:
+#   - port: 80
+#     targetPort: 80

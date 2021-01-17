@@ -1,0 +1,22 @@
+.notfications {
+    max-height: 36em;
+    overflow: auto;
+}
+
+.text-italics {
+    font-style: italic;
+}
+
+.text-md {
+    font-size: medium !important;
+    font-weight: bold !important;
+}
+
+.alert {
+    transition: box-shadow .3s !important;
+    box-shadow: 0px 0px 5px 0px #888;
+}
+.alert:hover {
+    box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.25),
+    -2px -2px 6px 0 rgba(247, 189, 114, 0.3);
+}

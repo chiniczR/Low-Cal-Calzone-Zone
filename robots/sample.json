@@ -1,0 +1,19 @@
+{
+    "o": {
+        "client": {
+            "email": "fulano@mail.com",
+            "name": "Fulano da Silva",
+            "addr": "Main 123, Metropolis",
+            "phone": "+1 234 5678"
+        },
+        "food": [{
+            "food": "789ghi",
+            "quantity": 1
+        }],
+        "drinks": [{
+            "drink": "987ihg",
+            "quantity": 1
+        }],
+        "orderId": null
+    }
+}
