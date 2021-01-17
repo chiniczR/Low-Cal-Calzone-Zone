@@ -1,4 +1,4 @@
-<mxfile modified="2021-01-17T17:24:50.677Z" host="app.diagrams.net" agent="5.0 (X11)" etag="Q23o-7sWDMWL9t0NTh5i" version="14.2.4" type="github">
+<mxfile modified="2021-01-17T17:25:16.397Z" host="app.diagrams.net" agent="5.0 (X11)" etag="cZ4fns2Oxpf5W1Menfh6" version="14.2.4" type="github">
   <diagram id="7gcUSTIZ7YSJ5vT40chW" name="Page-1">
     <mxGraphModel dx="1317" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="SZY12_XKgGBlkoAp8IEY-5" value="React Client" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-128.png;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="580" y="120" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="h2i22XZcBK6Nm0uoKhaS-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="h2i22XZcBK6Nm0uoKhaS-1" target="h2i22XZcBK6Nm0uoKhaS-5">
+        <mxCell id="h2i22XZcBK6Nm0uoKhaS-6" value="HTTP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="h2i22XZcBK6Nm0uoKhaS-1" target="h2i22XZcBK6Nm0uoKhaS-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="h2i22XZcBK6Nm0uoKhaS-1" value="User" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/laptop_client.svg;fontSize=14;" vertex="1" parent="1">
