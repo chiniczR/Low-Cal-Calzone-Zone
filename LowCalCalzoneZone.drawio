@@ -1,4 +1,4 @@
-<mxfile modified="2021-01-17T17:23:30.274Z" host="app.diagrams.net" agent="5.0 (X11)" etag="bSmaGhxi5Wi7-Hn59qFr" version="14.2.4" type="github">
+<mxfile modified="2021-01-17T17:24:15.933Z" host="app.diagrams.net" agent="5.0 (X11)" etag="Hh5IIsm2Fds8D9fZxbZp" version="14.2.4" type="github">
   <diagram id="7gcUSTIZ7YSJ5vT40chW" name="Page-1">
     <mxGraphModel dx="1317" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -70,7 +70,7 @@
           <mxGeometry x="869.8299999999999" y="460" width="60" height="70" as="geometry" />
         </mxCell>
         <mxCell id="h2i22XZcBK6Nm0uoKhaS-30" value="&quot;Kitchen&quot;&#xa;Topic&#xa;" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;sketch=1;fillColor=none;fontSize=14;image=https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Apache_kafka.svg/1200px-Apache_kafka.svg.png;" vertex="1" parent="1">
-          <mxGeometry x="1010" y="286" width="49.23" height="80" as="geometry" />
+          <mxGeometry x="1010" y="285" width="49.23" height="80" as="geometry" />
         </mxCell>
         <mxCell id="h2i22XZcBK6Nm0uoKhaS-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#67AB9F;fontSize=14;shape=link;" edge="1" parent="1" source="h2i22XZcBK6Nm0uoKhaS-31" target="h2i22XZcBK6Nm0uoKhaS-30">
           <mxGeometry relative="1" as="geometry" />
