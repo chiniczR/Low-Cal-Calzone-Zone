@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     # Create Consumer instance
     # 'auto.offset.reset=earliest' to start reading from the beginning of the
-    #   topic if no committed offsets exist
+    # topic if no committed offsets exist
     consumer = Consumer({
         'bootstrap.servers': 'my-cluster-kafka-bootstrap:9092',
         'group.id': 'myGroup',
@@ -40,9 +40,6 @@ if __name__ == '__main__':
             msg = consumer.poll(1.0)
             if msg is None:
                 # No message available within timeout.
-                # Initial message consumption may take up to
-                # `session.timeout.ms` for the consumer group to
-                # rebalance and start consuming
                 print("Waiting...")
                 continue
             elif msg.error():
@@ -52,7 +49,7 @@ if __name__ == '__main__':
                 record_key = msg.key()
                 record_value = msg.value()
                 data = json.loads(record_value)
-                if data["client"] == "":
+                if data["client"] == "":    # We don't want to accept an order without a client name
                     print("Waiting...")
                     continue
                 else:
@@ -60,7 +57,9 @@ if __name__ == '__main__':
                     print("{}) Client: {}, OrderId: {}, Content: {}"
                         .format(total_count, data["client"], data["order_id"], data["order_content"]))
                     
-                    # Prepare the order for 3 seconds
+                    ''' 
+                        Prepare the order
+                    '''
                     time.sleep(10)
 
                     sio.emit('notification', {'action': 'ORDER-READY', 'date': datetime.datetime.now().isoformat(), 'message': data, 'variant': 'success'})
