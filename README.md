@@ -1,6 +1,10 @@
 # Low-Cal-Calzone-Zone
 
-The Low-Cal Calzone Zone is a microservices application for a calzone store. For a more detailed description of what it does and the idea behind this project, visit this article.
+[Demo]: ./LCCZ-Screenshot.png "Demonstration of app"
+
+![Demo]
+
+The Low-Cal Calzone Zone is a microservices application for a calzone store. For a more detailed description of what it does and the idea behind the project, visit this article.
 
 ### Pre-requisites
 - A Kuberenetes cluster
@@ -32,3 +36,8 @@ sudo vi /etc/hosts
 ```
 ./stop.sh
 ```
+
+[Architecture]: ./LowCalCalzoneZone.jpg "Overview of Architecture"
+
+### Architecture Overview
+![Architecture]
