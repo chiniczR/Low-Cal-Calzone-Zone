@@ -1,4 +1,4 @@
-<mxfile modified="2021-01-18T13:38:47.493Z" host="app.diagrams.net" agent="5.0 (X11)" etag="sNFYNfTRvp_qqRxF_6jX" version="14.2.4" type="github">
+<mxfile modified="2021-01-19T11:55:04.605Z" host="app.diagrams.net" agent="5.0 (X11)" etag="ZWenTTvZeaIjPiRBchHv" version="14.2.4" type="github">
   <diagram id="7gcUSTIZ7YSJ5vT40chW" name="Page-1">
     <mxGraphModel dx="790" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -95,7 +95,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="h2i22XZcBK6Nm0uoKhaS-36" value="&lt;div&gt;Python&lt;/div&gt;&lt;div&gt;Kitchen&lt;/div&gt;&lt;div&gt;Service&lt;/div&gt;" style="shape=image;html=1;verticalAlign=middle;verticalLabelPosition=middle;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-128.png;fillColor=none;fontSize=14;strokeColor=#788AA3;fontColor=#46495D;labelPosition=right;align=left;" parent="1" vertex="1">
-          <mxGeometry x="899.53" y="50" width="70" height="70" as="geometry" />
+          <mxGeometry x="900" y="40" width="70" height="70" as="geometry" />
         </mxCell>
         <mxCell id="_RixIJ0K3F6Gv2JTvH9H-1" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/laptop_client.svg;fontSize=14;fillColor=#B2C9AB;strokeColor=#788AA3;fontColor=#46495D;" vertex="1" parent="1">
           <mxGeometry x="30" y="393.5" width="63" height="70" as="geometry" />
