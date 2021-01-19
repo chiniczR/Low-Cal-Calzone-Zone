@@ -15,6 +15,7 @@ The Low-Cal Calzone Zone is a microservices application for a calzone store. For
 ```
 git clone https://github.com/chiniczR/Low-Cal-Calzone-Zone
 cd Low-Cal-Calzone-Zone
+./init.sh
 ./start.sh
 ```
 Optionally, if you want to use the name low-cal-calzone.zone to access the application (locally), 

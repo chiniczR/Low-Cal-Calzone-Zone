@@ -13,8 +13,7 @@ spec:
         app: checkout
     spec:
         containers:
-        - image: checkout
-          imagePullPolicy: Never 
+        - image: chiniczr/checkout
           name: checkout
           ports:
           - containerPort: 8080

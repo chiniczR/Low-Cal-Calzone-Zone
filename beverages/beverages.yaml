@@ -13,8 +13,7 @@ spec:
         app: beverages
     spec:
         containers:
-        - image: beverages
-          imagePullPolicy: Never 
+        - image: chiniczr/beverages
           name: beverages
           ports:
           - containerPort: 8080

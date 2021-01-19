@@ -13,8 +13,7 @@ spec:
         app: websocket
     spec:
         containers:
-        - image: websocket
-          imagePullPolicy: Never
+        - image: chiniczr/websocket
           name: websocket
           ports:
           - containerPort: 5000

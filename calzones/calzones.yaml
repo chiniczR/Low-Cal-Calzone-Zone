@@ -13,8 +13,7 @@ spec:
         app: calzones
     spec:
         containers:
-        - image: calzones
-          imagePullPolicy: Never 
+        - image: chiniczr/calzones
           name: calzones
           ports:
           - containerPort: 8080

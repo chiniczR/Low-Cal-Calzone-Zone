@@ -13,8 +13,7 @@ spec:
         app: kitchen
     spec:
         containers:
-        - image: kitchen
-          imagePullPolicy: Never 
+        - image: chiniczr/kitchen
           name: kitchen
           ports:
           - containerPort: 8080

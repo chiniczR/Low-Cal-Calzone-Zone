@@ -13,8 +13,7 @@ spec:
     spec:
       containers:
       - name: client
-        image: client
-        imagePullPolicy: Never
+        image: chiniczr/client
         ports:
         - containerPort: 80
 ---
