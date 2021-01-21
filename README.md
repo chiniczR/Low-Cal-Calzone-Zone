@@ -8,6 +8,7 @@ The Low-Cal Calzone Zone is a microservices application for a calzone store. For
 
 ### Pre-requisites
 - A Kuberenetes cluster
+- NGINX Ingress Controller
 - kubectl
 - helm
 
