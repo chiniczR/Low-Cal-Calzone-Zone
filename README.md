@@ -4,7 +4,7 @@
 
 ![Demo]
 
-The Low-Cal Calzone Zone is a microservices application for a calzone store. For a more detailed description of what it does and the idea behind the project, visit this article on [https://medium.com/gitconnected/dbs-in-a-pod-calzones-containers-and-microservices-74e47e3e01bc].
+The Low-Cal Calzone Zone is a microservices application for a calzone store. For a more detailed description of what it does and the idea behind the project, visit this article on https://medium.com/gitconnected/dbs-in-a-pod-calzones-containers-and-microservices-74e47e3e01bc .
 
 ### Pre-requisites
 - A Kuberenetes cluster
